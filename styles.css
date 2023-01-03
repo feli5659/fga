@@ -72,6 +72,7 @@ p {
   list-style: none;
   font-size: 1.1rem;
   text-align: right;
+  text-decoration: none;
 }
 a {
   color: var(--black);
@@ -116,8 +117,10 @@ a {
   }
   .logo {
     width: 30%;
-    font-size: 2rem;
-    margin-inline: 0;
+  }
+
+  .logo > a:nth-child(1) > img:nth-child(1) {
+    padding: 7px;
   }
 
   .hamburger {
@@ -135,7 +138,7 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 169px;
+    top: 88px;
     gap: 0;
     flex-direction: column;
     width: 100%;
@@ -150,6 +153,8 @@ a {
   .nav-menu.active {
     left: 0;
   }
+
+  
 }
 
 /* TO TOP BUTTON */
@@ -179,7 +184,7 @@ a {
 iframe {
   padding-top: 20px;
   margin: auto;
-  border-radius: 70px;
+  border-radius: 0.75em;
   max-width: 100%;
 }
 
@@ -257,6 +262,13 @@ iframe {
   text-align: center;
 }
 
+.grid_1-1 {
+  text-align: left;
+}
+.grid_1-2 {
+  text-align: center;
+}
+
 button {
   /* Variables */
   --button_radius: 0.75em;
@@ -282,6 +294,10 @@ button {
   transition: transform 0.1s ease;
 }
 
+#tilmed > h1:nth-child(1) {
+  padding-inline: 10px;
+}
+
 button:hover .button_top {
   /* Pull the button upwards when hovered */
   transform: translateY(-0.33em);
@@ -290,6 +306,10 @@ button:hover .button_top {
 button:active .button_top {
   /* Push the button downwards when pressed */
   transform: translateY(0);
+}
+
+div.grid_1-2:nth-child(2) {
+  text-align: left;
 }
 
 footer {
@@ -424,6 +444,10 @@ img.footer_socials_icons-icon {
     position: absolute;
     top: 70%;
     left: 50%;
+  }
+
+  .grid_1-2 {
+    text-align: right;
   }
   .info-box {
     margin: 10px;
