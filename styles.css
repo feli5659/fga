@@ -4,14 +4,19 @@
   box-sizing: border-box;
   --cream: #faf9f4;
   --black: rgb(54, 53, 53);
-  background-color: var(--cream);
-
+  /* background-color: var(--cream); */
+  font-family: "Playfair Display", serif;
   color: rgb(54, 53, 53);
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+html {
+  background-image: url(images/background_fga.png);
+  background-size: contain;
 }
 
 body {
@@ -24,16 +29,14 @@ h1 {
   font-size: 2rem;
   text-align: center;
   padding-block: 20px;
-  font-family: "Playfair Display", serif;
 }
 
 h2 {
   font-weight: 500;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-inline: 1.4rem;
   line-height: 2rem;
   padding-top: 30px;
-  font-family: "Montserrat", sans-serif;
 }
 
 p {
@@ -41,6 +44,10 @@ p {
   line-height: 2rem;
   margin-inline: 1.4rem;
   font-family: "Montserrat", sans-serif;
+}
+
+section {
+  padding-block: 50px;
 }
 
 .titel {
@@ -77,6 +84,7 @@ p {
   text-align: right;
   text-decoration: none;
 }
+
 a {
   color: var(--black);
   text-decoration: none;
@@ -92,6 +100,10 @@ a {
 
 .navbar a:hover {
   border-bottom: 3px solid var(--black);
+}
+
+.logo_mobil a:hover {
+  border-bottom: none;
 }
 
 .hamburger {
@@ -111,6 +123,10 @@ a {
 }
 
 @media (max-width: 840px) {
+  html {
+    background-image: url(images/background_fga_mobil.png);
+    background-size: contain;
+  }
   .navbar {
     min-height: 70px;
     display: flex;
@@ -118,8 +134,11 @@ a {
     align-items: center;
     margin-right: 20px;
   }
-  .logo {
+  .logo_mobil {
     width: 30%;
+  }
+  .logo_desktop {
+    display: none;
   }
 
   .logo > a:nth-child(1) > img:nth-child(1) {
@@ -141,13 +160,14 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 88px;
+    top: 103px;
     gap: 0;
     flex-direction: column;
     width: 100%;
     text-align: center;
     transition: 0.3s;
     padding-right: 2.3rem;
+    background-color: var(--cream);
   }
   .nav-item {
     margin-block: 16px;
@@ -156,6 +176,13 @@ a {
   .nav-menu.active {
     left: 0;
   }
+}
+
+#undervisere > h2:nth-child(2),
+#undervisere > h2:nth-child(5),
+#undervisere > p:nth-child(6),
+#undervisere > p:nth-child(3) {
+  text-align: center;
 }
 
 /* TO TOP BUTTON */
@@ -167,7 +194,7 @@ a {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: var(--black); /* Set a background color */
+  background-color: #c4d0ce; /* Set a background color */
   color: var(--cream); /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
@@ -240,7 +267,7 @@ iframe {
 }
 
 .accordion__content {
-  background: transparent;
+  background: var(--cream);
   line-height: 1.6;
   font-size: 0.85em;
   display: none;
@@ -263,8 +290,18 @@ iframe {
   left: 50%;
 }
 
+.info1 {
+  margin-left: 50px;
+}
+
+.info1 li {
+  font-family: "Montserrat", sans-serif;
+  padding-block: 10px;
+}
+
 .grid_1 {
   text-align: center;
+  padding-top: 50px;
 }
 
 .grid_1-1 {
@@ -317,6 +354,13 @@ div.grid_1-2:nth-child(2) {
   text-align: left;
 }
 
+.sporgsmaal p,
+.pris,
+.hvor p,
+.hvor h3 {
+  text-align: center;
+}
+
 footer {
   text-align: center;
   border-top: 3px solid var(--black);
@@ -346,12 +390,21 @@ img.footer_socials_icons-icon {
 
 /* DESKTOP */
 
-@media (min-width: 1000px) {
-  .logo {
+@media (min-width: 840px) {
+  .logo_desktop {
     max-width: 200px;
   }
+
+  .logo_desktop > a:nth-child(1) {
+    border-bottom: none;
+  }
+
   .navbar {
     display: block;
+  }
+
+  .logo_mobil {
+    display: none;
   }
   .nav-menu {
     padding-top: 20px;
@@ -359,6 +412,7 @@ img.footer_socials_icons-icon {
     padding-bottom: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
   }
   .video-intro h2,
   .video-intro p {
@@ -399,7 +453,7 @@ img.footer_socials_icons-icon {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 
-    background: transparent;
+    background: var(--cream);
   }
 
   .accordion__label {
