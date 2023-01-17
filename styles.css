@@ -5,7 +5,7 @@
   --cream: #faf9f4;
   --black: rgb(54, 53, 53);
   background-color: var(--cream);
-  font-family: "Playfair Display", serif;
+
   color: rgb(54, 53, 53);
 }
 
@@ -16,7 +16,7 @@ img {
 
 body {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 h1 {
@@ -24,6 +24,7 @@ h1 {
   font-size: 2rem;
   text-align: center;
   padding-block: 20px;
+  font-family: "Playfair Display", serif;
 }
 
 h2 {
@@ -32,12 +33,14 @@ h2 {
   margin-inline: 1.4rem;
   line-height: 2rem;
   padding-top: 30px;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
   font-size: 1rem;
   line-height: 2rem;
   margin-inline: 1.4rem;
+  font-family: "Montserrat", sans-serif;
 }
 
 .titel {
@@ -153,8 +156,6 @@ a {
   .nav-menu.active {
     left: 0;
   }
-
-  
 }
 
 /* TO TOP BUTTON */
@@ -179,6 +180,10 @@ a {
   line-height: 2.4rem;
   list-style: square;
   padding-left: 5rem;
+}
+
+.overblik_liste li {
+  font-family: "Montserrat", sans-serif;
 }
 
 iframe {
@@ -342,6 +347,9 @@ img.footer_socials_icons-icon {
 /* DESKTOP */
 
 @media (min-width: 1000px) {
+  .logo {
+    max-width: 200px;
+  }
   .navbar {
     display: block;
   }
